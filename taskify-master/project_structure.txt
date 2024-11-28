@@ -1,0 +1,217 @@
+.
+├── LICENSE
+├── README.md
+├── app
+│   ├── (auth)
+│   │   └── (signin)
+│   │       └── page.tsx
+│   ├── api
+│   │   ├── auth
+│   │   │   └── [...nextauth]
+│   │   │       └── route.ts
+│   │   ├── dashboard
+│   │   │   └── analytics
+│   │   │       └── route.ts
+│   │   ├── dav
+│   │   │   └── create
+│   │   │       └── route.ts
+│   │   └── user
+│   │       ├── login
+│   │       │   └── route.ts
+│   │       ├── register
+│   │       │   └── route.ts
+│   │       └── task
+│   │           ├── create
+│   │           │   └── route.ts
+│   │           ├── delete
+│   │           │   └── route.ts
+│   │           ├── list
+│   │           │   └── route.ts
+│   │           └── update
+│   │               └── route.ts
+│   ├── dashboard
+│   │   ├── calendar
+│   │   │   └── page.tsx
+│   │   ├── employee
+│   │   │   ├── [employeeId]
+│   │   │   │   └── page.tsx
+│   │   │   └── page.tsx
+│   │   ├── kanban
+│   │   │   └── page.tsx
+│   │   ├── layout.tsx
+│   │   ├── page.tsx
+│   │   ├── product
+│   │   │   ├── [productId]
+│   │   │   │   └── page.tsx
+│   │   │   └── page.tsx
+│   │   ├── profile
+│   │   │   └── page.tsx
+│   │   ├── tasks
+│   │   │   ├── new
+│   │   │   │   └── page.tsx
+│   │   │   └── page.tsx
+│   │   └── test
+│   │       └── page.tsx
+│   ├── favicon.ico
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── not-found.tsx
+├── auth.config.ts
+├── auth.ts
+├── components
+│   ├── breadcrumbs.tsx
+│   ├── dashboard-nav.tsx
+│   ├── date-range-picker.tsx
+│   ├── file-uploader.tsx
+│   ├── icons.tsx
+│   ├── layout
+│   │   ├── ThemeToggle
+│   │   │   ├── theme-provider.tsx
+│   │   │   └── theme-toggle.tsx
+│   │   ├── header.tsx
+│   │   ├── mobile-sidebar.tsx
+│   │   ├── page-container.tsx
+│   │   ├── providers.tsx
+│   │   ├── sidebar-old.tsx
+│   │   ├── sidebar.tsx
+│   │   └── user-nav.tsx
+│   ├── modal
+│   │   └── alert-modal.tsx
+│   └── ui
+│       ├── Spinner.tsx
+│       ├── accordion.tsx
+│       ├── alert-dialog.tsx
+│       ├── alert.tsx
+│       ├── avatar.tsx
+│       ├── badge.tsx
+│       ├── breadcrumb.tsx
+│       ├── button.tsx
+│       ├── calendar.tsx
+│       ├── card.tsx
+│       ├── chart.tsx
+│       ├── checkbox.tsx
+│       ├── collapsible.tsx
+│       ├── command.tsx
+│       ├── dialog.tsx
+│       ├── dropdown-menu.tsx
+│       ├── form.tsx
+│       ├── heading.tsx
+│       ├── input.tsx
+│       ├── label.tsx
+│       ├── modal.tsx
+│       ├── popover.tsx
+│       ├── progress.tsx
+│       ├── radio-group.tsx
+│       ├── scroll-area.tsx
+│       ├── select.tsx
+│       ├── separator.tsx
+│       ├── sheet.tsx
+│       ├── skeleton.tsx
+│       ├── slider.tsx
+│       ├── switch.tsx
+│       ├── table
+│       │   ├── data-table-filter-box.tsx
+│       │   ├── data-table-reset-filter.tsx
+│       │   ├── data-table-search.tsx
+│       │   └── data-table.tsx
+│       ├── table.tsx
+│       ├── tabs.tsx
+│       ├── textarea.tsx
+│       ├── toast.tsx
+│       ├── toaster.tsx
+│       ├── tooltip.tsx
+│       └── use-toast.ts
+├── components.json
+├── constants
+│   ├── data.ts
+│   └── mock-api.ts
+├── env.example.txt
+├── hooks
+│   ├── use-callback-ref.tsx
+│   ├── use-controllable-state.tsx
+│   ├── use-debounce.tsx
+│   ├── useMultistepForm.tsx
+│   └── useSidebar.tsx
+├── lib
+│   ├── db.ts
+│   ├── form-schema.ts
+│   ├── searchparams.ts
+│   ├── store.ts
+│   └── utils.ts
+├── middleware.ts
+├── next-env.d.ts
+├── next.config.js
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── project_structure.txt
+├── public
+│   ├── next.svg
+│   ├── taskGIF.gif
+│   └── vercel.svg
+├── sections
+│   ├── auth
+│   │   ├── github-auth-button.tsx
+│   │   ├── user-auth-form.tsx
+│   │   └── view
+│   │       ├── index.ts
+│   │       └── sigin-view.tsx
+│   ├── employee
+│   │   ├── employee-form.tsx
+│   │   ├── employee-tables
+│   │   │   ├── cell-action.tsx
+│   │   │   ├── columns.tsx
+│   │   │   ├── employee-table.tsx
+│   │   │   ├── index.tsx
+│   │   │   └── use-employee-table-filters.tsx
+│   │   └── views
+│   │       ├── employee-listing-page.tsx
+│   │       ├── employee-view-page.tsx
+│   │       └── index.ts
+│   ├── kanban
+│   │   ├── board-column.tsx
+│   │   ├── column-action.tsx
+│   │   ├── kanban-board.tsx
+│   │   ├── new-section-dialog.tsx
+│   │   ├── new-task-dialog.tsx
+│   │   ├── task-card.tsx
+│   │   └── view
+│   │       ├── index.ts
+│   │       └── kanban-view-page.tsx
+│   ├── overview
+│   │   ├── area-graph.tsx
+│   │   ├── bar-graph.tsx
+│   │   ├── pie-graph.tsx
+│   │   ├── recent-sales.tsx
+│   │   └── view
+│   │       ├── index.ts
+│   │       └── overview.tsx
+│   ├── product
+│   │   ├── product-form.tsx
+│   │   ├── product-tables
+│   │   │   ├── cell-action.tsx
+│   │   │   ├── columns.tsx
+│   │   │   ├── index.tsx
+│   │   │   └── use-product-table-filters.tsx
+│   │   └── view
+│   │       ├── index.ts
+│   │       ├── product-listing.tsx
+│   │       └── product-view-page.tsx
+│   ├── profile
+│   │   ├── profile-create-form.tsx
+│   │   └── view
+│   │       ├── index.ts
+│   │       └── profile-view-page.tsx
+│   └── task
+│       ├── TaskCalendar.tsx
+│       ├── TaskCreatePage.tsx
+│       ├── TaskForm.tsx
+│       ├── TaskListingPage.tsx
+│       └── TaskTable.tsx
+├── tailwind.config.js
+├── tsconfig.json
+└── types
+    ├── index.ts
+    └── next-auth.d.ts
+
+57 directories, 158 files
